@@ -1,0 +1,117 @@
+// Colors
+//
+// All Sass color variables prefixed with $color-.
+// This makes it easy to figure out what a variable
+// is for later.
+//
+// Markup:
+// <h3>Brand Colors</h3>
+// <div class="kss-swatch" style="background-color: #1F3A53">
+//   <div class="kss-swatch__hex">$color-dark-blue<br>#1F3A53</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #A1D3DF">
+//   <div class="kss-swatch__hex">$color-light-blue<br>#A1D3DF</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #80BDCB">
+//   <div class="kss-swatch__hex">$color-lighter-blue<br>#80BDCB</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #E15B00">
+//   <div class="kss-swatch__hex">$color-orange<br>#E15B00</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #F17520">
+//   <div class="kss-swatch__hex">$color-orange-hover<br>#F17520</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #000000">
+//   <div class="kss-swatch__hex">$color-black<br>#000000</div>
+// </div>
+// <div class="kss-swatch kss-swatch-light" style="background-color: #FFFFFF">
+//   <div class="kss-swatch__hex">$color-white<br>#FFFFFF</div>
+// </div>
+// <h3>Grays</h3>
+// <div class="kss-swatch" style="background-color: #B0B0B0">
+//   <div class="kss-swatch__hex">$color-silver-chalice<br>#B0B0B0</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #BFBFBF">
+//   <div class="kss-swatch__hex">$color-silver-dark<br>#BFBFBF</div>
+// </div>
+// <div class="kss-swatch kss-swatch-light" style="background-color: #CCCCCC">
+//   <div class="kss-swatch__hex">$color-silver<br>#CCCCCC</div>
+// </div>
+// <div class="kss-swatch kss-swatch-light" style="background-color: #EBEBEB">
+//   <div class="kss-swatch__hex">$color-gallery<br>#EBEBEB</div>
+// </div>
+// <h3>Messages</h3>
+// <div class="kss-swatch kss-swatch-light" style="background-color: #DFF0D8">
+//   <div class="kss-swatch__hex">$color-success-bg<br>#DFF0D8</div>
+// </div>
+// <div class="kss-swatch kss-swatch-light" style="background-color: #FCF8E3">
+//   <div class="kss-swatch__hex">$color-warning-bg<br>#FCF8E3</div>
+// </div>
+// <div class="kss-swatch kss-swatch-light" style="background-color: #F2DEDE">
+//   <div class="kss-swatch__hex">$color-error-bg<br>#F2DEDE</div>
+// </div>
+//
+// Weight: 999
+//
+// Style guide: colors
+
+//=======================================================
+// Colors
+// --------------------------------------------
+// Named using http://chir.ag/projects/name-that-color
+//=======================================================
+
+// Brand Colors
+// descriptive color variables
+$cloud-burst: #1F3A53;
+$cello: #264768;
+$morning-glory: #A1D3DF;
+$bamboo: #E15B00;
+$tango: #F17520;
+$half-baked: #80BDCB;
+
+// functional color variables
+$color-dark-blue: $cloud-burst;
+$color-dark-blue-hover: $cello;
+$color-light-blue: $morning-glory;
+$color-lighter-blue: $half-baked;
+$color-orange-hover: $tango;
+$color-orange: $bamboo;
+
+// Shades
+$color-white: white;
+$color-black: black;
+$color-gallery: #EBEBEB;
+$color-silver: #CCCCCC;
+$color-silver-dark: #BFBFBF;
+$color-silver-chalice: #B0B0B0;
+
+// Messages
+$color-success-text: #3C763D;
+$color-success-bg: #DFF0D8;
+$color-success-border: #D6E9C6;
+
+$color-warning-text: #8A6D3B;
+$color-warning-bg: #FCF8E3;
+$color-warning-border: #FAEBCC;
+
+$color-error-text: #A94442;
+$color-error-bg: #F2DEDE;
+$color-error-border: #EBCCD1;
+
+.kss-swatch {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  width: 145px;
+  height: 140px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $color-white;
+  padding-top: 90px;
+
+  &.kss-swatch-light {
+    border: 1px solid $color-gallery;
+    color: $color-black;
+  }
+}

@@ -1,0 +1,15 @@
+.kss-swatch {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  width: 145px;
+  height: 140px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  padding-top: 90px; }
+  .kss-swatch.kss-swatch-light {
+    border: 1px solid #EBEBEB;
+    color: black; }
+
+/*# sourceMappingURL=sample-list.css.map */

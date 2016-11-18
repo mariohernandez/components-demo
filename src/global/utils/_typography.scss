@@ -1,0 +1,176 @@
+// Type
+//
+// Custom fonts are loaded via JavaScript provided by fonts.com.
+//
+// Markup:
+// <h3>Base</h3>
+// <h4>font-stack-base</h4>
+// <div style="font: 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 55 Roman </div>
+// <div style="font: italic 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 56 Italic </div>
+// <div style="font: 500 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 65 Medium </div>
+// <div style="font: bold 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 75 Bold </div>
+// <div style="font: bold italic 20px/2 'Neue Haas Grotesk W01 Disp'"> Neue Haas Grotesk™ W01 Text 76 Bold Italic </div>
+// <h3>Secondary</h3>
+// <h4>font-stack-secondary</h4>
+// <div style="font: 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 45 Light </div>
+// <div style="font: italic 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 46 Light Italic </div>
+// <div style="font: 500 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 55 Roman </div>
+// <div style="font: bold 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 56 Italic </div>
+// <div style="font: bold italic 20px/2 'Neue Haas Grotesk W01'"> Neue Haas Grotesk™ W01 Display 65 Medium </div>
+// <h3>Tertiary</h3>
+// <h4>font-stack-tertiary</h4>
+// <div style="font: 20px/2 'Minion W01'"> Minion® W01 Bold </div>
+// <div style="font: italic 20px/2 'Minion W01'"> Minion® W01 Bold Italic </div>
+// <div style="font: bold 20px/2 'Minion W01'"> Minion® W01 Italic </div>
+// <div style="font: bold italic 20px/2 'Minion W01'"> Minion® W01 Regular </div>
+//
+// Weight: 999
+//
+// Style guide: Type
+
+// Primary font stack
+$font-primary: 'muli', sans-serif;
+
+// Fallback font stack
+$font-fallback: Arial, sans-serif;
+
+// Icon font
+$icons: (
+  check: "\e913"
+);
+
+@mixin icon($position: before, $icon: false, $styles: true) {
+  @if $position == both {
+    $position: 'before, &:after';
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $icon {
+      // A particular icon has been specified
+      content: "#{map-get($icons, $icon)}";
+    }
+    @if $styles {
+      // Supportive icon styles required
+      font-family: 'vtusa-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    // Include any extra rules supplied for the pseudo-element
+    @content;
+  }
+}
+
+// /Section module heading
+@mixin section-module-heading {
+  font-size: 2.8rem;
+  color: $color-white;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($bp-md) {
+    font-size: 5rem;
+  }
+}
+
+// Base heading styles
+@mixin heading($color: $color-dark-blue) {
+  color: $color;
+  font-weight: bold;
+
+  &:hover {
+    // To be determined by design
+  }
+}
+
+@mixin heading-1($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 3.5rem;
+  line-height: (65 / 60);
+
+  @include breakpoint($bp-md) {
+    font-size: 6rem;
+  }
+}
+
+@mixin heading-2($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 2.8rem;
+  line-height: (55 / 50);
+
+  @include breakpoint($bp-md) {
+    font-size: 5rem;
+  }
+}
+
+@mixin heading-3($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 1.8rem;
+  line-height: (22 / 18);
+
+  @include breakpoint($bp-md) {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin heading-4($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 1.8rem;
+  line-height: (34 / 28);
+
+  @include breakpoint($bp-md) {
+    font-size: 3rem;
+  }
+}
+
+@mixin heading-5($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 1.4rem;
+  line-height: (30 / 22);
+
+  @include breakpoint($bp-md) {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin heading-6($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 1.4rem;
+  line-height: (22 / 18);
+
+  @include breakpoint($bp-md) {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin sub-heading($color: $color-dark-blue) {
+  @include heading($color);
+  font-size: 2.8rem;
+  line-height: (34 / 30);
+
+  @include breakpoint($bp-md) {
+    font-size: 3rem;
+  }
+}
+
+@mixin text-body($color: $color-dark-blue) {
+  color: $color;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.6;
+
+  @include breakpoint($bp-md) {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+

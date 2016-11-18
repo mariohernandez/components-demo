@@ -1,0 +1,195 @@
+.kss-swatch {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  width: 145px;
+  height: 140px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  padding-top: 90px; }
+  .kss-swatch.kss-swatch-light {
+    border: 1px solid #EBEBEB;
+    color: black; }
+
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%; }
+
+* {
+  box-sizing: inherit; }
+  *:before, *:after {
+    box-sizing: inherit; }
+
+.layout-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 5rem auto; }
+  .layout-content:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+body {
+  /**
+   * load system fonts by default.
+   */
+  color: #1F3A53;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  /**
+   * load custom fonts only after fonts have been fully
+   * loaded.  Using FontFaceObserver to listen for when
+   * custom fonts have been loaded. https://fontfaceobserver.com.
+   * doing this avoids  FOIT (Flash Of Invisible Text).
+   */ }
+  @media (min-width: 64em) {
+    body {
+      font-size: 1.6rem;
+      line-height: 1.5; } }
+  @media (min-width: 64em) {
+    body {
+      font-size: 1.6rem;
+      line-height: 1.5; } }
+  body.fonts-loaded {
+    font-family: "muli", sans-serif; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+template {
+  display: none; }
+
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0; }
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+img {
+  height: auto;
+  border: 0;
+  max-width: 100%; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+a {
+  -webkit-text-decoration-skip: objects;
+  color: #E15B00;
+  text-decoration: none;
+  transition: color 0.3s ease; }
+  a:active, a:hover {
+    color: #F17520;
+    text-decoration: underline;
+    outline-width: 0; }
+
+p {
+  margin: 0; }
+
+dfn {
+  font-style: italic; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+pre {
+  margin: 0;
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1rem; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+textarea {
+  overflow: auto; }
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/*# sourceMappingURL=global.css.map */

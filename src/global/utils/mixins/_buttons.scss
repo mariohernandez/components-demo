@@ -1,0 +1,62 @@
+@mixin button($background: $color-orange) {
+  background: $background;
+  border: 0;
+  color: $color-white;
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 50px;
+  line-height: 1;
+  padding: 17px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  width: auto;
+
+  &:hover {
+    background: $color-orange-hover;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $color-orange-hover;
+  }
+
+  @include breakpoint($md) {
+    font-size: 1.5rem;
+    height: 60px;
+    padding: 22px 50px;
+  }
+}
+
+@mixin button-base {
+  background-color: transparent;
+  border: 0;
+  height: auto;
+  padding: 0;
+
+  &:active,
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin button-secondary {
+  @include button;
+  background: transparent;
+  border: 2px solid $color-orange;
+  color: $color-orange;
+
+  @include breakpoint($md) {
+    background: $color-white;
+  }
+
+  &:active,
+  &:hover {
+    color: $color-white;
+    background: $color-orange-hover;
+    border: 2px solid $color-orange-hover;
+  }
+}

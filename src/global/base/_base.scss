@@ -1,0 +1,77 @@
+//=======================================================
+// Base
+//=======================================================
+
+// Set default font family to sans-serif.
+// Prevent iOS text size adjust after orientation change, without disabling
+// user zoom.
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+* {
+  box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+.layout-content {
+  @include clearfix;
+  width: 100%;
+  max-width: 960px;
+  margin: 5rem auto;
+}
+
+body {
+  /**
+   * load system fonts by default.
+   */
+  @include text-body;
+  font-family: $font-fallback;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  /**
+   * load custom fonts only after fonts have been fully
+   * loaded.  Using FontFaceObserver to listen for when
+   * custom fonts have been loaded. https://fontfaceobserver.com.
+   * doing this avoids  FOIT (Flash Of Invisible Text).
+   */
+  &.fonts-loaded {
+    font-family: $font-primary;
+  }
+}
+
+// HTML5 display definitions
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+// Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+template {
+  display: none;
+}

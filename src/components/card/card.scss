@@ -1,0 +1,177 @@
+// Card
+//
+// Card component
+//
+// Markup: card.twig
+//
+// Style guide: Components.card
+
+.card {
+  position: relative;
+  background-color: #EBEBEB;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    display: block;
+    background-color: white;
+  }
+}
+
+.card__bio {
+  padding: 0 40px;
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: max-height .3s ease-in-out;
+  border-bottom: 1px solid #E15B00;
+
+  &.is-open {
+    max-height: 20em;
+    padding-bottom: 30px;
+  }
+}
+
+.card__image {
+  position: relative;
+  z-index: 40;
+  text-align: center;
+
+  @media (min-width: 64em) {
+    margin: 0;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.card__name {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 4px;
+}
+
+.card__social-media--label {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @media (min-width: 64em) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.card__menu--social {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card__menu--social--item {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  list-style: none;
+  font-size: 50px;
+  margin: 0 10px;
+  line-height: 1;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    color: #1F3A53;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #E15B00;
+    }
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    fill: #1F3A53;
+
+    &:hover,
+    &:focus {
+      fill: #E15B00;
+    }
+  }
+
+  span {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+}
+
+.card__view-bio {
+  display: block;
+  position: relative;
+  height: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: transparent;
+  color: #E15B00;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #CCCCCC;
+  text-align: left;
+
+  &::after {
+    display: block;
+    height: 0;
+    width: 0;
+    border-bottom: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 8px solid #E15B00;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    display: block;
+    right: 40px;
+  }
+}
+
+.card__view-bio {
+  &.flip-carat {
+    &::after {
+      display: block;
+      height: 0;
+      width: 0;
+      border-bottom: 8px solid #E15B00;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
