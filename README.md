@@ -1,3 +1,8 @@
+# Components Demo Drupal 8 Theme
+The Components Demo theme was created by [Mario Hernandez](https://twitter.com/imariohernandez) of Mediacurrent for the purpose of demonstrating how to integrate components into Drupal 8.  This theme was the result of a 3 part blog series titled [Integrating Componens with Drupal 8](https://www.mediacurrent.com/blog/integrating-components-drupal-8-part-1).
+
+This theme uses [KSS Node](https://github.com/kss-node/kss-node) for building a living styleguide, along with other front-end tools such as Gulp, Sass and others.
+
 ## Getting Started
 If you haven't yet, install nvm:
 https://github.com/creationix/nvm
