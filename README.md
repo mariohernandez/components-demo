@@ -6,7 +6,7 @@ This theme was the result of a 3 part blog series titled [Integrating Componens 
 
 Tools used on this theme include [KSS Node](https://github.com/kss-node/kss-node) for building a living styleguide, along with Gulp, Sass, and others.
 
-For a great walkthrough of KSS Node, check out my budy's [Zack Hawkins's](https://twitter.com/ThatZackHawkins) presentation from [Drupal Camp Atlanta](https://youtu.be/q5FeyLuM5as?list=PL5rI_IBJiat3g7zivmhu-my2oPYlgRtTd).
+For a great walkthrough of KSS Node, check out my budy's [Zack Hawkins](https://twitter.com/ThatZackHawkins) presentation from [Drupal Camp Atlanta](https://youtu.be/q5FeyLuM5as?list=PL5rI_IBJiat3g7zivmhu-my2oPYlgRtTd).
 
 ## Getting Started
 If you haven't yet, install nvm:
