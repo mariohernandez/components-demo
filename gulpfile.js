@@ -116,7 +116,7 @@ gulp.task('styleguide', function() {
     source: [
       'src/global',
       'src/components',
-      'src/layout'
+      'src/templates'
     ],
     destination: './dist/style-guide',
     builder: 'src/style-guide/builder',
