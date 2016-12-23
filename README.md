@@ -46,3 +46,11 @@ _This is ideal when you are doing a lot of Sass changes and you want to make sur
 `npm run clean`
 
 _This will perform a one-time deletion of all compiled files within the dist/ directory._
+
+### Possible issues and how to fix them
+You may encounter the following errors while running `npm install`:
+
+Can not locate `gulp-cssnano`, `gulp-order` or `gulp-concat`
+
+To fix these errors you can install those plugins individually by running `npm install gulp-cssnano`, `npm install gulp-order` or `npm install gulp-concat`
+
