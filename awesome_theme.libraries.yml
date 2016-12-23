@@ -1,4 +1,4 @@
-# These lines define the demo/global library.
+# These lines define the awesome_theme/global library.
 global:
   css:
     # The SMACSS category, "base", is loaded before other categories. Drupal 8
@@ -36,5 +36,5 @@ card:
 #     js/script.js: {}
 #   # If this library had dependencies on other libraries, you could specify it like this:
 #   dependencies:
-#     - demo/clearfix
-#     - demo/visually-hidden
+#     - awesome_theme/clearfix
+#     - awesome_theme/visually-hidden
